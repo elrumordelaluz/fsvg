@@ -10,12 +10,19 @@ class App extends Component {
     this.state = {
       value: .6
     }
+    
     this.handleChange = this.handleChange.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
   handleChange (x, y) {
     this.setState({ value: y })
   }
+
+  handleInputChange (e) {
+   this.setState({ value: e.target.value }) 
+  }
+
   render () {
     return (
       <div className={appStyles.app}>
@@ -24,7 +31,7 @@ class App extends Component {
           border={ 70 }
           value={ this.state.value }
           onChange={ this.handleChange } />
-        <p>{ this.state.value.toFixed(2) }</p>
+        <input type="number" value={parseFloat(this.state.value)} min="0" max="1" step=".01" onChange={this.handleInputChange} />
       </div>
     );
   }
