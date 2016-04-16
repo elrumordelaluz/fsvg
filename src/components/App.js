@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import appStyles from './app.scss';
+import appStyles from './app.css';
 
 import Dial from './Dial';
 

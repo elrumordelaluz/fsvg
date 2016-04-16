@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './Dial.scss';
+import styles from './Dial.css';
 
 class Dial extends Component {
   constructor (props) {
