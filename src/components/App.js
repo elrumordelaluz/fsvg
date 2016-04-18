@@ -32,6 +32,7 @@ class App extends Component {
           value={ this.state.value }
           onChange={ this.handleChange } />
         <input type="number" value={parseFloat(this.state.value)} min="0" max="1" step=".01" onChange={this.handleInputChange} />
+        <div className={appStyles.filtered}>hola</div>
       </div>
     );
   }
