@@ -60,54 +60,61 @@ class Dial extends Component {
       if (this.props.onChange) {
         let xValue = this.props.value + dx;
         let yValue = this.props.value + dy;
-        
+
         if (xValue < 0) {
           xValue = 0;
         }
-        
+
         if (xValue > 1) {
           xValue = 1;
         }
-        
+
         if (yValue < 0) {
           yValue = 0;
         }
-        
+
         if (yValue > 1) {
           yValue = 1;
         }
-        
+
         this.props.onChange(xValue, yValue)
       }
     }
   }
 
   render () {
-    const { radius, border, value } = this.props;
+    const { radius, border, value, colors } = this.props;
     const p = 2 * Math.PI * (radius - border / 2);
-    
+
     const strokeWidth = border;
     const strokeDashoffset = p * (1 - value);
     const strokeDasharray = p;
 
+    let totalColor, qColor;
+    if (colors) {
+      totalColor = colors.length ? colors[0] : null;
+      qColor = colors.length > 1 ? colors[1] : null;
+    }
+
     return (
-      <svg 
-        className={styles.Dial} 
-        ref={ (knob) => this.knob = knob }
+      <svg
+        className={styles.Dial}
+        ref={ knob => this.knob = knob }
         viewBox={ `0 0 ${ radius * 2 } ${ radius * 2 }` }
         onMouseDown={ this.mouseDown }>
-        <circle 
+        <circle
           className={styles.DialTotal}
-          style={{ strokeWidth }}
+          style={{ strokeWidth, stroke: totalColor }}
           r={ radius - border / 2 }
           cx={ radius }
           cy={ radius } />
-        <circle 
+        <circle
           className={styles.DialQ}
           style={{
             strokeWidth,
             strokeDashoffset,
             strokeDasharray,
+            stroke: qColor
           }}
           r={ radius - border / 2 }
           cx={ radius }

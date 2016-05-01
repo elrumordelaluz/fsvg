@@ -5,15 +5,15 @@
   transform: rotate(-90deg);
   cursor: ns-resize;
 }
-  .DialTotal,
-  .DialQ {
-    fill: transparent;
-  }
-  .DialTotal {
-    stroke: #607D8B;
-  }
-  .DialQ {
-    stroke: #00B0FF;
-    stroke-dashoffset: 0;
-    stroke-dasharray: 0;
-  }
+.DialTotal,
+.DialQ {
+  fill: transparent;
+}
+.DialTotal {
+  stroke: #607D8B;
+}
+.DialQ {
+  stroke: #00B0FF;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0;
+}
