@@ -1,5 +1,5 @@
 .Dial {
-  display: block;
+  display: inline-block;
   width: 5rem;
   height: 5rem;
   transform: rotate(-90deg);

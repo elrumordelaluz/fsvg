@@ -2,9 +2,25 @@
 
 .app {
   color: var(--main-color, red);
-  font-family: var(--font-family, red);
+  font-family: var(--font-family);
   font-size: 1.75em;
   font-weight: 100;
+  text-align: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.value {
+  padding: .3em .5em;
+  font-size: .85em;
+  outline: 0;
+  font-weight: 100;
+  font-family: var(--font-family);
+  text-align: center;
 }
 
 .filtered {

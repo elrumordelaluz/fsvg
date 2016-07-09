@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import appStyles from './app.css';
+import style from './app.css';
 
 import Dial from './Dial';
 
@@ -25,15 +25,23 @@ class App extends Component {
 
   render () {
     return (
-      <div className={appStyles.app}>
+      <div className={style.app}>
         <Dial
           radius={ 140 }
           border={ 70 }
           value={ this.state.value }
           onChange={ this.handleChange }
           colors={['#D7CCC8', '#795548']} />
-        <input type="number" value={parseFloat(this.state.value)} min="0" max="1" step=".01" onChange={this.handleInputChange} />
-        <div className={appStyles.filtered}>hola</div>
+        <br />
+        <input 
+          type="number" 
+          value={parseFloat(this.state.value)} 
+          min="0" 
+          max="1" 
+          step=".01" 
+          className={style.value}
+          onChange={this.handleInputChange} />
+        <div className={style.filtered}>hola</div>
       </div>
     );
   }
