@@ -1,7 +1,7 @@
 {
-  "name": "react-tiny-starter",
+  "name": "fsvg",
   "version": "1.0.0",
-  "description": "A pretty tiny React starter files using Webpack",
+  "description": "WIP",
   "main": "index.js",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 3004"
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elrumordelaluz/react-tiny-starter.git"
+    "url": "https://github.com/elrumordelaluz/fsvg"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
